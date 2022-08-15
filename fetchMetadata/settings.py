@@ -28,10 +28,10 @@ environ.Env.read_env()
 SECRET_KEY = "django-insecure-j(8)@r_)%z^axflen4v%!dj_#_bjo$^d$hg^^elj=^th9#mtzy"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["18.191.104.204"]
 
 
 # Application definition
@@ -144,12 +144,12 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+STATIC_ROOT = '/var/www/mysite/assets/'
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static'),
+# )
 MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_ROOT = '/var/www/mysite/assets/'
 
 ### SMTP configuration; simple mail transfer protocol
 #for development only

@@ -221,7 +221,24 @@ i{
     margin-top: 8px;
     text-align: center;
 }
-
+@media (max-width:975px){
+    .remember-me{
+        font-size: 16px
+    }
+    .or p {
+        margin-left: 8.5rem;
+    }
+}
+@media (max-width:935px){ 
+    .or p {
+        margin-left: 120.3rem;
+    }
+}
+@media (max-width:1016px){ 
+    .or p {
+        margin-left: 12.3rem;
+    }
+}
 @media (max-width:775px){
     body{
         font-size: 16px;

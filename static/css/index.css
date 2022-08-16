@@ -136,8 +136,23 @@ nav {
   display: none;
   cursor: pointer;
 }
+@media (max-width: 910px) {
+  .nav-menu li a {
+    padding-left: 15px;
+  }
+  .login-btn{
+    padding: 10px 25px;
+    margin-left: 15px;
+  }
+  .signup-btn{
+    padding; 10px 20px;
+  }
+}
 /*This is the styling of the mobile view/responsiveness header/nav section*/
 @media (max-width: 720px) {
+  .generalflexselector{
+    display: block;
+  }
   .nav-menu {
     position: fixed;
     left: -100%;
@@ -149,12 +164,12 @@ nav {
     transition: 0.3s;
     text-align: center;
   }
-  .nav-menu li a {
+  /* .nav-menu li a {
     font-size: 18px;
     padding: 10px 0;
     margin: 10px 0;
     display: block;
-  }
+  } */
   .nav-menu.active {
     left: 0;
   }
@@ -177,7 +192,7 @@ nav {
   .dashboard-btn a {
     font-size: 16px;
   }
-  .signup-btn,
+  /* .signup-btn,
   .login-btn {
     padding: 8px 5px;
     margin-left: 10px;
@@ -185,7 +200,7 @@ nav {
   .login-btn a,
   .signup-btn a {
     font-size: 16px;
-  }
+  } */
 
   .logo {
     margin: -25px;
@@ -221,7 +236,7 @@ nav {
   width: 100%;
 }
 .left-cont {
-  width: 50%;
+  width: 100%;
 }
 .right-cont {
   width: 50%;
@@ -240,7 +255,7 @@ nav {
 }
 .hero-content p {
   height: 65px;
-  width: 629px;
+  max-width: 629px;
   font-size: 24px;
   color: #ffffff;
   font-weight: 400;
@@ -286,18 +301,8 @@ nav {
 }
 /*This is the styling of the mobile view/responsiveness hero section*/
 @media (max-width: 720px) {
-  .hero-content {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-  }
-  .left-cont {
-    width: 100%;
-  }
-  .right-cont {
-    width: 100%;
-    padding: 0;
-  }
+
+ 
   .hero-content h3 {
     font-size: 30px;
     line-height: 26px;
@@ -342,6 +347,15 @@ nav {
   background: url("footer_bg_svg/Vector2.svg");
   height: 100%;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.start-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .how-it-works h3 {
   font-size: 35px;
@@ -354,6 +368,9 @@ nav {
 }
 .how-it-works .row {
   flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  
 }
 .how-it-works .row .col-md-3 {
   flex-direction: column;
@@ -383,6 +400,9 @@ nav {
   margin-bottom: 10px;
   color: #408cc6;
 }
+.service{
+  text-align: center;
+}
 .how-it-works .row .col-md-3 p {
   font-size: 20px;
   font-weight: 400;
@@ -390,6 +410,11 @@ nav {
   letter-spacing: 0em;
   text-align: center;
   color: #6f6f6f;
+}
+@media (max-width: 410px){
+  .hero-content{
+    padding: 0 14px;
+  }
 }
 /*This is the styling of the mobile view/responsiveness of the how it works section*/
 @media (max-width: 720px) {

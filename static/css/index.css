@@ -289,6 +289,7 @@ nav {
   .hero-content {
     display: flex;
     flex-direction: column;
+    padding: 0;
   }
   .left-cont {
     width: 100%;
@@ -306,28 +307,27 @@ nav {
     width: 100%;
   }
   .hero-content p {
-    height: 158px;
-    width: 357px;
+    width:unset;
     font-size: 16px;
     line-height: 24px;
+    padding: 10px;
     letter-spacing: 0em;
-    text-align: center;
-    margin-bottom: 0;
   }
   .hero-content button {
     height: 48px;
     width: 300px;
     margin: auto 40px;
   }
-  .hero-content button a {
+  .hero-content a {
     font-size: 16px;
-    text-align: center;
+    display: flex;
+    margin; 0 45px;
+    align-items: center;
+    justify-content: center;
   }
   .hero-content img {
     display: none;
-    height: 400px;
-    width: 300px;
-    margin-top: 30px;
+    
   }
   .animation {
     width: 100%;
@@ -633,16 +633,23 @@ nav {
   cursor: pointer;
 }
 .accordion-item-header::after {
-  content: "\25BE";
-  font-size: 50px;
-  color: #408cc6;
+  content: "\002B";
+  font-size: 30px;
+  color: #6f6f6f;
   position: absolute;
   right: 25px;
+  font-weight: 200;
 }
 .accordion-item-header.active::after {
-  transform: rotate(180deg);
+  content: "\002D";
+  font-size: 30px;
+  color: #6f6f6f;
+  position: absolute;
+  right: 25px;
+  font-weight: 200;
 }
 .accordion-item-body {
+  padding-left: 20px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
@@ -656,6 +663,9 @@ nav {
   font-size: 20px;
   font-weight: 400;
 }
+
+
+
 /*This is the styling of the mobile view/responsiveness of the need-to-know section*/
 @media (max-width: 720px) {
   .faq h3 {
@@ -665,11 +675,10 @@ nav {
     width: 80%;
   }
   .accordion-item-header {
-    font-size: 20px;
+    font-size: 18px;
   }
   .accordion-item-header::after {
-    content: "\25BE";
-    font-size: 30px;
+    font-size: 25px;
   }
   .accordion-item-body-content {
     text-align: justify;

@@ -21,13 +21,13 @@
           
           <img src="{% static 'img/user_photo.png' %}" alt="" class="image"/>
           {% endif %}
-                    <form method="POST" enctype="multipart/form-data">
+                    <form method="POST" action="">
                       {% csrf_token %}
                         <a class="btn upload" href="">
-                          {{ form.picture }}
+                         
                         </a>
                    
-                </div>
+              
                 <div class="submit__btn">
                
                         <button type="submit"  class="btn1 save">Save changes</button>

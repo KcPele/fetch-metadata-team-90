@@ -36,7 +36,7 @@ class UserProfile(LoginRequiredMixin, View):
             new_password = form.cleaned_data.get('new_password')
             user.set_password(new_password)
             user.save()
-            update_session_auth_hash(request, user)
+            # update_session_auth_hash(request, user)
             messages.success(request, "password change success")
             return redirect('change_password_done')
         else:

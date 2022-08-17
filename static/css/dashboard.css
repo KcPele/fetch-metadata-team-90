@@ -5,6 +5,52 @@
   margin: 0;
   padding: 0;
 }
+.upload__area-drag {
+ 
+  position: relative;
+  margin-bottom: 20px;
+}
+.upload__area-drag input {
+  position: absolute;
+  border: none;
+  opacity:0.0;
+  background: transparent;
+  /* outline: 2px dashed #92b0b3; */
+  /* outline-offset: -10px; */
+  padding: 116px 0px 100px 190px;
+  text-align: center !important;
+  color: transparent;
+  width: 100%;
+}
+
+.upload__area-drag input:hover {
+  background: rgb(26, 117, 187, 0.3); !important;
+  cursor: pointer;
+} 
+#imageName {
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: 500;
+  color: rgb(18, 141, 150);
+
+}
+
+
+
+@media (max-width: 630px){
+  .upload__area-drag input {
+    padding-right: 11px;
+  }
+  #imageName {
+    font-size: 12px;
+    font-weight: normal;
+    color: rgb(18, 141, 150);
+  
+  }
+  .upload__area-drag:before {
+    left: 18px;
+  }
+}
 body {
   width: 100%;
   margin-top: 16px;
@@ -495,27 +541,25 @@ span img:checked {
   justify-content: center;
 }
 
-input.extract-button {
+.extract-button {
+  display: none;
   justify-content: center;
   align-items: center;
   background: #e1e1e1;
   border-radius: 4px;
-  width: 230px;
+  /* width: 230px; */
   margin: auto;
   cursor: pointer;
   border: none;
-}
-
-input.extract-button {
   /* font-family: 'Droid Sans'; */
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 16px;
   color: #ffffff;
-  padding: 20px 31px;
+  padding: 17px 15px;
 }
-input.extract-button:hover {
+.extract-button:hover {
   background-color: #56ccf2;
 }
 
@@ -761,7 +805,18 @@ input.save-button {
 /* RIGHT_SIDE ENDS HERE */
 
 /* RESPONSIVENESS BEGINS HERE */
-
+@media (max-width: 890px){
+  .extraction-button {
+    display: flex;
+  }
+  .upload-area p {
+    width: 379px;
+    font-size: 16px;
+  }
+  .upload-area p button {
+    font-size: 16px;
+  }
+}
 @media (max-width: 760px) {
   body {
     width: 100%;
@@ -771,11 +826,9 @@ input.save-button {
   }
   .main-flow-flex {
     flex-direction: column;
-    width: 80%;
+    width: 100%;
   }
-  .upload-container {
-    max-width: none;
-  }
+
   .upload-container .upload-area {
     overflow: hidden;
     width: 100%;
@@ -794,7 +847,7 @@ input.save-button {
     max-width: none;
   }
   .main-flow {
-    width: 100%;
+    max-width: 100%;
     flex-direction: column;
   }
   .section-container {

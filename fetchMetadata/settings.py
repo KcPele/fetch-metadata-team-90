@@ -33,6 +33,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["3.17.71.21"]
 
+FILE_UPLOAD_MAX_MEMORY_SIZE = 10485760
 
 # Application definition
 
@@ -142,7 +143,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-# STATIC_URL = "/static/"
+STATIC_URL = "/static/"
 
 STATIC_ROOT = '/var/www/metlab/static'
 STATICFILES_DIRS = (
@@ -150,7 +151,7 @@ STATICFILES_DIRS = (
 )
 MEDIA_URL = "/media/"
 MEDIA_ROOT = '/var/www/metlab/media'
-# MEDIA_ROOT = "media"
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'static')
 
 ### SMTP configuration; simple mail transfer protocol
 #for development only

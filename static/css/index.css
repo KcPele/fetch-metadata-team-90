@@ -228,7 +228,7 @@ nav {
 /*Styling of the hero section starts here*/
 .hero-section {
   width: 100%;
-  padding-top: 100px;
+  padding-top: 70px;
   background-image: url("footer_bg_img/Hero.png");
 }
 .hero-content {
@@ -266,14 +266,14 @@ nav {
 }
 .hero-content button {
   height: 56px;
-  width: 350px;
-  left: 386px;
+  width: 100%;
+  
   cursor: pointer;
-  top: 0px;
+ 
   font-size: 20px;
   border-radius: 4px;
   border: none;
-  padding: 10px;
+  
   background: #56ccf2;
   color: #ffffff;
   margin: 20px 0;
@@ -315,13 +315,12 @@ nav {
     width:unset;
     font-size: 16px;
     line-height: 24px;
-    padding: 10px;
     letter-spacing: 0em;
   }
   .hero-content button {
     height: 48px;
-    width: 300px;
-    margin: auto 40px;
+    margin-top: 30px;
+    
   }
   .hero-content a {
     font-size: 16px;
@@ -415,6 +414,12 @@ nav {
   .hero-content{
     padding: 0 14px;
   }
+  .how-it-works .row .col-md-3 h6 {
+    font-size: 18px;
+}
+.how-it-works .row .col-md-3 p {
+  font-size: 15px;
+}
 }
 /*This is the styling of the mobile view/responsiveness of the how it works section*/
 @media (max-width: 720px) {
@@ -440,9 +445,7 @@ nav {
   .how-it-works .row .col-md-3 h6 {
     font-size: 22px;
   }
-  .how-it-works .row .col-md-3 p {
-    font-size: 18px;
-  }
+
 }
 
 /*Stling what you need to know section goes here*/
@@ -712,7 +715,7 @@ nav {
   }
 }
 
-/*Styling of the Footer starts here*/
+/* Styling of the Footer starts here
 footer {
   width: 100%;
   height: 100%;
@@ -795,7 +798,7 @@ footer .social .icons i {
   border-radius: 2px;
 }
 /*This is the css for scroll-to-top button*/
-.scroll-to-top {
+/*.scroll-to-top {
   position: fixed;
   bottom: 60px;
   right: 20px;
@@ -832,4 +835,4 @@ footer .social .icons i {
   .resourses {
     padding: 20px;
   }
-}
+} */

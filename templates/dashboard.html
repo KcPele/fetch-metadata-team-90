@@ -2,7 +2,9 @@
 {% extends 'base.html' %} 
 {% load static %}
 <title>{% block title %}Dashboard{% endblock %}</title>
-{% block css %}<link rel="stylesheet"  href="{% static 'css/dashboard.css' %}" /> {% endblock %}
+{% block css %}
+
+<link rel="stylesheet"  href="{% static 'css/dashboard.css' %}" /> {% endblock %}
 
 
 {%block navbar%} {% endblock %}
@@ -81,18 +83,26 @@
             <form method="post" enctype="multipart/form-data" class="dropzone">
                 {% csrf_token %}
                 
-             <div class="upload-area">
-              <div class="icon"><img class="cloud-icon" src="{% static 'svg/cloud-plus.svg' %}" alt=""></div>
-              <p> Drag & drop to upload file or <button>Click to Upload</button></p>
-              
-              <input id="drag-area" type="file" hidden>
-              {{ form.file.errors }}
+            <div class="upload__area-drag">
+
+            
+              {% if form.errors %}
+              {{ form.errors.file }}
+              {% endif %}
             {{ form.file }}
             </div>
+             
+            <div class="upload-area">
+              <div class="icon"><img class="cloud-icon" src="{% static 'svg/cloud-plus.svg' %}" alt=""></div> 
+              <p> Drag & drop to upload file or <button>Click to Upload</button></p>
+              
+              <span id="imageName"></span>
+            </div>
+
             
 
             <div class="extraction-button">
-             <input class="extract-button" id="id_file" type="submit" value="Extract Metadata">           
+             <input id='extract-button' class="extract-button" id="id_file" type="submit" value="Extract Metadata">           
             </div>
           </div>
         </form>
@@ -194,6 +204,18 @@
   </main>
 
   <script>
+    let fileInput = document.getElementById("id_file");
+    let imageName = document.getElementById("imageName")
+    let extractButton = document.querySelector("#extract-button")
+
+fileInput.addEventListener("change", ()=>{
+    extractButton.style.display = "flex"
+    let inputImage = document.querySelector("input[type=file]").files[0];
+    
+    imageName.innerText = inputImage.name;
+    consoel.log(extractButton)
+    
+})
     const shareLink = document.querySelectorAll(".shareLink")
     const viewBtn = document.querySelector(".share-button"),
     popup = document.querySelector(".popup"),
@@ -241,6 +263,7 @@
 {% block footer %}
 {% endblock %}
 {% block js %}
+
 <script type="text/javascript"  src="{% static 'js/dashboard.js' %}"></script>
  
 {% endblock %}

@@ -61,7 +61,10 @@
     <div class="spinner__background">
       <div class="spinner"></div>
     </div>
-    {% if messages %} {% for message in messages %}
+ 
+
+    {% if messages %} 
+    {% for message in messages %}
     <div id="alert" class="toast-wrapper">
       <div class="toast-div" id="toast-{{ message.tags }}">
         <div class="container-{{ message.tags }}">
@@ -75,7 +78,9 @@
         </button>
       </div>
     </div>
-    {% endfor %} {% endif %} {%block navbar%}
+    {% endfor %} 
+    {% endif %} 
+    {%block navbar%}
     <header>
       <nav>
         <div class="logo generalflexselector">
@@ -206,7 +211,8 @@
           error.style.transform =
             "translateX(400px)";
            
-        }, 4000);
+        }, 6000);
+        
       }
       success.style.transform = "translateX(0)";
         clearTimeout(x);
@@ -214,7 +220,7 @@
 
             success.style.transform =
             "translateX(400px)";
-        }, 4000);
+        }, 6000);
 
       function closeToastsuccess() {
         success.style.transform =
@@ -229,9 +235,9 @@
     </script>
   
     <script type="text/javascript" src="{% static 'js/loader.js' %}"></script>
-
-    {% block js %} 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    {% block js %} 
+    
     <script type="text/javascript" src="{% static 'js/index.js' %}"></script>{% endblock %}
   </body>
   

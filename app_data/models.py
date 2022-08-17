@@ -42,11 +42,7 @@ class FileManager(models.Manager):
 
 class FileUpload(models.Model):
     user = models.ForeignKey(UserModel, related_name='user_file', on_delete=models.CASCADE)
-    file = ContentTypeRestrictedFileField(
-        upload_to=user_directory_path,
-        content_types=content_types,
-        max_upload_size=max_upload_size
-    )
+    file = models.FileField(upload_to=user_directory_path, validators=[validate_file_extension])
     file_name =  models.CharField( editable=False, max_length=100, blank=True, null=True)
     file_type =  models.CharField( editable=False, max_length=15, blank=True, null=True)
     created = models.DateTimeField('created', auto_now_add=True)

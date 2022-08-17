@@ -114,13 +114,13 @@ class DashboardView(LoginRequiredMixin, View):
                 self.context['new_data'] = self.context['file_list'][0]
             else :
                 self.context['new_data'] = None
-
+            self.context['form'] = self.form()
             
             messages.success(request, "Data extracted successfully")
             return render(request, self.template_name, self.context)
         else:
             self.context['form'] = form
-            messages.error(request, "Extraction failed try again")
+            messages.error(request, f"Extraction failed try again")
             return render(request, self.template_name, self.context)
 
 class SavePageView(LoginRequiredMixin, View):

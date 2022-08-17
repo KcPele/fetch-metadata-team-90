@@ -113,7 +113,7 @@ footer .social {
   flex-wrap: wrap;
 }
 footer .social .icons {
-  margin: 20px 10px;
+  margin: 0 10px;
   display: flex;
   flex-direction: row;
 }
@@ -153,6 +153,10 @@ footer .social .icons i {
     display: flex;
     margin: 10px auto;
   }
+  footer .social {
+    display: flex;
+
+  }
   .footer-container {
     padding-top: 50px;
   }
@@ -173,8 +177,9 @@ footer .social .icons i {
   right: 0;
   overflow: hidden;
   font-family: "Work Sans";
-  font-size: 14px;
+  font-size: 24px;
   bottom: 80%;
+  z-index: 1000;
 }
 #show-alert-success {
   position: absolute;
@@ -203,6 +208,8 @@ footer .social .icons i {
   grid-template-columns: 1.2fr 6fr 0.5fr;
   transform: translate(400px);
   transition: 1s;
+  
+  
 }
 .container-success,
 .container-success {
@@ -304,7 +311,7 @@ footer .social .icons i {
   width: 100px;
   left: 50%;
   bottom: 50%;
-  /* display: none */
+  /* display: none; */
   border-radius: 50%;
   background: conic-gradient(#4596d3 50%, rgb(247, 241, 241));
   animation: rotate 1.2s linear infinite;

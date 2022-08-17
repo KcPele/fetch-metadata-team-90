@@ -145,12 +145,12 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 
-STATIC_ROOT = '/var/www/metlab/static'
+# STATIC_ROOT = '/var/www/metlab/static'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
-# MEDIA_URL = "/media/"
-MEDIA_ROOT = '/var/www/metlab/media'
+MEDIA_URL = "/media/"
+# MEDIA_ROOT = '/var/www/metlab/media'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static')
 
 ### SMTP configuration; simple mail transfer protocol

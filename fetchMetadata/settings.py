@@ -31,7 +31,7 @@ SECRET_KEY = "django-insecure-j(8)@r_)%z^axflen4v%!dj_#_bjo$^d$hg^^elj=^th9#mtzy
 DEBUG = True
 
 
-ALLOWED_HOSTS = ["3.17.71.21"]
+ALLOWED_HOSTS = ["3.17.71.21", "*"]
 
 FILE_UPLOAD_MAX_MEMORY_SIZE = 10485760
 
@@ -149,9 +149,9 @@ STATIC_ROOT = '/var/www/metlab/static'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
-MEDIA_URL = "/media/"
+# MEDIA_URL = "/media/"
 MEDIA_ROOT = '/var/www/metlab/media'
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static')
 
 ### SMTP configuration; simple mail transfer protocol
 #for development only

@@ -164,6 +164,10 @@ nav {
     transition: 0.3s;
     text-align: center;
   }
+  .nav-menu li {
+    display: block;
+
+}
   /* .nav-menu li a {
     font-size: 18px;
     padding: 10px 0;

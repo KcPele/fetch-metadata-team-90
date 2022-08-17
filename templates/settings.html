@@ -21,7 +21,7 @@
           
           <img src="{% static 'img/user_photo.png' %}" alt="" class="image"/>
           {% endif %}
-                    <form method="POST" action="#">
+                    {% comment %} <form method="POST" action="#">
                       {% csrf_token %}
                         <a class="btn upload" href="">
                          
@@ -54,7 +54,7 @@
     
                     {{form.errors}}
                    
-                    </form>
+                    </form> {% endcomment %}
                 </div>
             </section>
     

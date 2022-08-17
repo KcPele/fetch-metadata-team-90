@@ -11,7 +11,7 @@ from django.contrib.auth import views as auth_views
 urlpatterns = [
 	path('accounts/signup/', SignupRedirectView.as_view(pattern_name='django_registration_register', permanent = False), name="signup"),
     path('profile/edit/<str:pk>/', UpdateProfileView.as_view(template_name = 'edit_profile.html', success_url = '/accounts/profile/'), name='edit-profile'),
-	path('accounts/password_change/', PasswordChangeRedirectView.as_view(pattern_name='profile', permanent = False), name="password_change"),
+	# path('accounts/password_change/', PasswordChangeRedirectView.as_view(pattern_name='profile', permanent = False), name="password_change"),
 	path('accounts/profile/', UserProfile.as_view(template_name='settings.html'), name='profile'),
 	path("accounts/register/", RegistrationView.as_view(form_class=AuthyRegistrationForm), name="django_registration_register"),
 	path("accounts/", include("django_registration.backends.activation.urls")),

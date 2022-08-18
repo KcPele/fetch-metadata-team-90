@@ -129,8 +129,8 @@
     </div>
 
 
-
-    <a class="google_text google_content" href="{% url "google_login" %}">
+    {% comment %} href="{% url "google_login" %}" {% endcomment %}
+    <a aria-disabled="true" class="google_text google_content" >
 
         <img class="google" src="{% static 'img/flat-color-icons_google.png' %}" alt="">
 

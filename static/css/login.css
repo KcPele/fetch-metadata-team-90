@@ -340,7 +340,10 @@ i{
         width: 100%
     }
     .card-box .test i{
-        margin-left: 18rem;
+        right: 20px;
+    }
+    .eye {
+        right: 20px;
     }
     .text{
         font-size: 14px;

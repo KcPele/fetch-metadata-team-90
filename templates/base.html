@@ -46,7 +46,7 @@
 
     {% endblock %}
 
-    <script type="text/javascript" src="{% static 'js/general.js' %}"></script>
+   
   </head>
   <body>
     <!-- pre loader-->
@@ -98,20 +98,22 @@
             <a href="{% url 'dashboard' %}" class="nav-link">Meta Data</a>
           </li>
           {% if request.user.is_authenticated %}
-          <button class="dashboard-btn">{{ request.user.username}}</button>
-          <div class="dropdown">
-            <button class="dropbtn" type="button">
-              <i class="fa fa-user" aria-hidden="true"></i>
-            </button>
-            <div class="dropdown-content">
-              <a href="{% url 'dashboard' %}">Dashboard</a>
-              <a href="{% url 'profile' %}">Profile</a>
-
-              <a href="{% url 'edit-profile' request.user.id %}">Settings</a>
-
-              <a href="{% url 'logout' %}">Log out</a>
+          <button class="dashboard-btn">{{ request.user.username}}
+            <div class="dropdown">
+              <button class="dropbtn" type="button">
+                <i class="fa fa-user" aria-hidden="true"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="{% url 'dashboard' %}">Dashboard</a>
+                <a href="{% url 'profile' %}">Profile</a>
+  
+                <a href="{% url 'edit-profile' request.user.id %}">Settings</a>
+  
+                <a href="{% url 'logout' %}">Log out</a>
+              </div>
             </div>
-          </div>
+          </button>
+          
           {% else %}
 
           <a href="{% url 'login' %}" target="_blank" rel="noopener" class="login-btn nav-link">Login</a>
@@ -236,9 +238,11 @@
   
     <script type="text/javascript" src="{% static 'js/loader.js' %}"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{% static 'js/general.js' %}"></script>
     {% block js %} 
     
-    <script type="text/javascript" src="{% static 'js/index.js' %}"></script>{% endblock %}
+    <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+    {% endblock %}
   </body>
   
 </html>

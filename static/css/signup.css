@@ -143,6 +143,7 @@ input[type=submit]{
   border-radius: 4px;
   border: 1px solid rgba(166, 166, 166, 1);
   padding-left: 15px; 
+  position: relative;
 }
 
 form .button input{
@@ -161,7 +162,7 @@ form .button input{
 }
 
 
-.eye{
+.eye {
   position: absolute;
   display: inline;
 }
@@ -184,6 +185,7 @@ i{
 
 .card-box .test{
   display: flex;
+  position: relative;
   flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
@@ -193,7 +195,7 @@ i{
 .buttom-text, test{
   line-height: normal;
 }
-.eye{
+.card-box .test i {
   margin-right: 15px;
 }
 
@@ -299,6 +301,9 @@ i{
       display: flex;
       flex-direction: column;
   }
+  .eye {
+    right: 20px;
+}
   
   .card-box.last{
       margin-bottom: 20px;
@@ -308,9 +313,10 @@ i{
       flex-direction: row;
       margin-top: 20px;
   }
-  .card-box .test i{
-      margin-left: 18rem;
-  }
+  .card-box .test i {
+    right: 20px;
+    margin-right: 0;
+}
   .text{
       font-size: 14px;
       width: 80%;

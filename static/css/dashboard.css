@@ -253,7 +253,7 @@ body {
   width: 100%;
   height: 56px;
   justify-content:space-between;
-  align-items: center;
+  /* align-items: center; */
 }
 
 input.save-button {
@@ -278,7 +278,6 @@ input.save-button {
   box-sizing: border-box;
   
   padding: 10px;
-  width: 138px;
   height: 56px;
   background-color: #7d8284;
   /* border: 2px solid #e1e1e1; */
@@ -295,7 +294,6 @@ input.save-button {
   font-weight: 700;
   display: flex;
   font-size: 18px;
-  padding: 10px 25px;
   align-items: center;
   justify-content: center;
   line-height: 16px;
@@ -346,11 +344,12 @@ input.save-button {
 .day {
   display: flex;
   /* flex-direction: row; */
+  justify-content: center;
+  /* padding: 10px; */
   align-items: center;
-  padding: 0px;
-  gap: 24px;
-  margin: 10px 32px 32px;
-  width: 349px;
+  /* gap: 24px; */
+  /* margin: 10px 32px 32px; */
+  /* width: 349px; */
 }
 
 .day p {
@@ -368,7 +367,6 @@ input.save-button {
 }
 
 .history-data {
-  width: 349px;
   height: 96px;
   background: #fafafa;
   border-radius: 4px;
@@ -384,34 +382,7 @@ input.save-button {
   border-radius: 4px;
   padding: 18px;
 }
-.mtdata-img1 {
-  width: 64px;
-  height: 64px;
-  background: #d8f0eb;
-  border-radius: 4px;
-  padding: 18px;
-}
-.mtdata-img2 {
-  width: 64px;
-  height: 64px;
-  background: #ddd8f0;
-  border-radius: 4px;
-  padding: 18px;
-}
-.mtdata-img3 {
-  width: 64px;
-  height: 64px;
-  background: #ebd8f0;
-  border-radius: 4px;
-  padding: 18px;
-}
-.mtdata-img4 {
-  width: 64px;
-  height: 64px;
-  background: #d8e5f0;
-  border-radius: 4px;
-  padding: 18px;
-}
+
 .history-data img {
   width: 27px;
   height: 33px;
@@ -423,7 +394,7 @@ input.save-button {
     align-items: flex-start;
     padding: 0px;
     word-wrap: break-word;
-    max-width: 160px;
+    max-width: 100%;
     height: 58px;
   }
   
@@ -464,6 +435,8 @@ input.save-button {
 @media (max-width: 760px) {
   body {
     width: 100%;
+    margin: 0;
+    padding: 0;
   }
  
   .main-flow-flex {
@@ -485,9 +458,7 @@ input.save-button {
     width: 200px;
     margin: auto;
   }
-  .result-container {
-    max-width: none;
-  }
+  
   .main-flow {
     max-width: 100%;
     flex-direction: column;
@@ -496,18 +467,19 @@ input.save-button {
     width: 100%;
   }
   
-  .result-container {
-    width: 430px;
-  }
+ 
   .result-container p {
     font-size: 16px;
   }
   .right-side {
-    width: 430px;
-    margin: 25px;
+    width: 100%;
+
   }
   .right-side span {
     font-size: 18px;
+  }
+  .history-data {
+    margin: 15px;
   }
   .result-buttons {
     display: flex;
@@ -515,7 +487,18 @@ input.save-button {
   }
 }
 
+@media (max-width: 520px) {
+  .share-button{
+    padding: 0 10px;
+  }
+  .popup.show {
+    max-width: 100%;
+  }
 
+  .result-container {
+    padding: 10px;
+  }
+}
 
 /*CSS for share pop-up*/
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&display=swap');

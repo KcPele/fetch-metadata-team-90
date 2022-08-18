@@ -308,9 +308,16 @@ body.bg-dark .share2 {
   .head-right {
     display: none;
   }
+  .right a {
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: inherit;
+  }
 }
 
 @media screen and (max-width: 470px) {
+
   .head-section {
     max-width: 470px;
     left: 0px;

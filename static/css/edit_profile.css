@@ -8,7 +8,7 @@
 body {
   width: 100%;
   margin-top: 16px;
-  padding: 10px;
+  /* padding: 10px; */
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   display: flex;
@@ -47,7 +47,7 @@ body {
   height: 74vh;
 }
 .left {
-  /* width: 40%; */
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   /* justify-content: space-around; */
@@ -147,4 +147,12 @@ input[type=text], input[type=url] {
   padding: 0 15px;
   border: 1px solid #a6a6a6;
   border-radius: 4px;
+}
+@media screen and (max-width: 710px){
+  body{
+    padding: 0;
+  }
+  .main-flow{
+    margin: 0;
+  }
 }

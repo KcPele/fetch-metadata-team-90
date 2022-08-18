@@ -29,7 +29,7 @@ body{
 .field_wrapper{
   margin-top: 0;
   max-width: 23em;
-  max-height: 100vh;
+  min-height: 100vh;
 }
 .picture-side{
   flex: 1;
@@ -103,13 +103,6 @@ body{
   /* margin-bottom: 2rem; */
 }
 
-.picture-side .heading-right{
-  Width:100%;
-  Height:112px;
-  Top:184px;
-  Left:100px;
-  
-}
 
 
 
@@ -221,6 +214,9 @@ i{
       font-size: 16px;
       font-weight: 400;
   }
+  .picture__logo-content {
+    padding: 0;
+}
   .field_wrapper{
     width
   }
@@ -236,7 +232,7 @@ i{
   }
   
   .picture-side .heading-right{
-      Width:330px;
+    max-Width: 330px;
   }
   .picture-side .logo{
       margin-bottom: 20px;

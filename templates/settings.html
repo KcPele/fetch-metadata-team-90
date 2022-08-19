@@ -21,6 +21,12 @@
           
           <img src="{% static 'img/user_photo.png' %}" alt="" class="image"/>
           {% endif %}
+          <div style="text-align:center; color: #535353;">
+            {% if request.user.profile.user.email  %}<p>{{ request.user.profile.user.email }} </p>{% endif %}
+            {% if request.user.profile.first_name  %}<p>{{ request.user.profile.first_name }} </p>{% endif %}
+            {% if request.user.profile.last_name  %}<p>{{ request.user.profile.last_name }} </p>{% endif %}
+            {% if request.user.profile.location  %}<p>{{ request.user.profile.location }} </p>{% endif %}
+          </div>
                     {% comment %} <form method="POST" action="#">
                       {% csrf_token %}
                         <a class="btn upload" href="">

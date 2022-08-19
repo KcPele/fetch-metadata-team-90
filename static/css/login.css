@@ -55,6 +55,7 @@ body{
 .picture-side{
     width: 50%;
     height: 100vh;
+    overflow: hidden;
     position: absolute;
     top: 0;
     right: 0;

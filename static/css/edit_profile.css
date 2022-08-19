@@ -14,7 +14,38 @@ body {
   display: flex;
 }
 
+#id_picture::-webkit-file-upload-button {
+  visibility: hidden;
+  user-select: none;
+}
+#id_picture{
+  color: transparent;
+}
+#id_picture::before {
+  content: 'Select profile picture';
+  display: inline-block;
+  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  color: #535353 !important;
+  outline: none;
+  white-space: nowrap;
+  /* color: transparent; */
+  
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
 
+#id_picture:hover::before {
+  border-color: black;
+}
+#id_picture:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
 
 
 /* MAIN FLOW  STARTS*/
@@ -148,6 +179,12 @@ input[type=text], input[type=url] {
   border: 1px solid #a6a6a6;
   border-radius: 4px;
 }
+@media screen and (max-width: 826px){
+  .text-area {
+    height: 47vh;
+
+  }
+}
 @media screen and (max-width: 710px){
   body{
     padding: 0;
@@ -155,4 +192,5 @@ input[type=text], input[type=url] {
   .main-flow{
     margin: 0;
   }
+
 }

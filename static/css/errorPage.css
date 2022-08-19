@@ -150,7 +150,7 @@ a {
   top: 350px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1090px) {
   /* For mobile phones: */
   .errorPad {
     display: none;
